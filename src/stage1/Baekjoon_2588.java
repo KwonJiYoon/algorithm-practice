@@ -11,6 +11,8 @@ public class Baekjoon_2588 {
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
 
+
+
         br.close();
 
         System.out.println(a * (b%10));
