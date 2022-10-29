@@ -1,4 +1,4 @@
-package stage1;
+package stage01;
 
 public class Baekjoon_10172 {
     public static void main(String[] args) {

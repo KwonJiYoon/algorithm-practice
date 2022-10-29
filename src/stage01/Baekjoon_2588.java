@@ -1,4 +1,4 @@
-package stage1;
+package stage01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
