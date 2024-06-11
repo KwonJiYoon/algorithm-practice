@@ -1,3 +1,4 @@
-# leet-code
-🔥 Daily challenge 🔥   
-✏️ TIL 📑
+### algorithm-practice
+
+#### Leet Code
+🔥 Daily challenge 🔥
