@@ -38,6 +38,8 @@ class Solution {
                 // i = 1 > maxHeap.add(2);
                 // i = 2 > maxHeap.add(3);
                 maxHeap.add(projects.get(i).profit);    
+                // System.out.println(maxHeap);
+                // System.out.println(j);
                 i++;
             }
 
