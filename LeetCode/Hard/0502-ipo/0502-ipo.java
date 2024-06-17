@@ -31,9 +31,13 @@ class Solution {
 
         // 최대 k개의 프로젝트를 선택하기 위한 루프
         for (int j = 0; j < k; j++) {
+            // 0, 1 반복
             // w로 자금을 지원할 수 있는 모든 프로젝트를 최대 힙에 추가
             while (i < n && projects.get(i).capital <= w) {
-                maxHeap.add(projects.get(i).profit);
+                // i = 0  > maxHeap.add(1);
+                // i = 1 > maxHeap.add(2);
+                // i = 2 > maxHeap.add(3);
+                maxHeap.add(projects.get(i).profit);    
                 i++;
             }
 
