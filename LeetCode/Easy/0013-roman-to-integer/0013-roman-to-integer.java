@@ -15,9 +15,7 @@ class Solution {
         for(int i = 0; i < s.length(); i++) {
 
             if (i < s.length() - 1 && map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {
-
-                sum += map.get(s.charAt(i + 1)) - map.get(s.charAt(i));
-                i++;
+                sum -= map.get(s.charAt(i));
             } else {
                 sum += map.get(s.charAt(i));
             }
