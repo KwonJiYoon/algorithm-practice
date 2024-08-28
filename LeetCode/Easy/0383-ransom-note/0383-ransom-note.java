@@ -7,7 +7,7 @@ class Solution {
         map.put(magazine.charAt(i), map.getOrDefault(magazine.charAt(i), 0) + 1);
     }
 
-    System.out.print(map);
+
     for(int j = 0; j < ransomNote.length(); j++) {
         map.put(ransomNote.charAt(j), map.getOrDefault(ransomNote.charAt(j), 0) - 1);
 
