@@ -6,21 +6,19 @@ class Solution {
         if(s.length() != t.length()) return false;
 
         for(int i = 0; i < s.length(); i++) {
-            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+            char sChar = s.charAt(i);
+            map.put(sChar, map.getOrDefault(sChar, 0) + 1);
         }
-        System.out.print(map);
 
         for(int j = 0; j < t.length(); j++) {
-
-            if(!map.containsKey(t.charAt(j)) || map.get(t.charAt(j)) == 0) {
+            char tChar = t.charAt(j);
+            if(!map.containsKey(tChar) || map.get(tChar) == 0) {
                 return false;
             } else {
-                map.put(t.charAt(j), map.get(t.charAt(j)) - 1);
+                map.put(tChar, map.get(tChar) - 1);
             }
             
         }
-
-        System.out.print(map);
         
         return true;
     }
