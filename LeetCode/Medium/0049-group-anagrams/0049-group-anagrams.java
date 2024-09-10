@@ -10,12 +10,11 @@ class Solution {
 
             String sortStr = new String(sortArray);
 
-            if(map.containsKey(sortStr)) {
-                map.get(sortStr).add(strs[i]);
-            } else {
-                map.put(sortStr, new ArrayList<>(Arrays.asList(strs[i])));
+            if(!map.containsKey(sortStr)) {
+                map.put(sortStr, new ArrayList<>());
             }
-
+            
+            map.get(sortStr).add(strs[i]);
         }
 
         return new ArrayList<>(map.values());
