@@ -6,9 +6,9 @@ class Solution {
             long num = 0;
             
             if(i == 0) {
-                num = Long.valueOf(x);
+                num = (long)x;
             } else {
-                num = answer[i-1] + Long.valueOf(x); 
+                num = answer[i-1] + (long)x; 
             }
             
             answer[i] = num;
