@@ -10,9 +10,7 @@ class Solution {
             } else {
                 num = answer[i-1] + (long)x; 
             }
-            
             answer[i] = num;
-            
         }
         return answer;
     }
