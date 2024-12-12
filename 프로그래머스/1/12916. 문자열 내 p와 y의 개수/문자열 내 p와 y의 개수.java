@@ -4,6 +4,8 @@ class Solution {
         int pCount = 0;
         int yCount = 0;
         
+        s = s.toLowerCase();
+        
         for(int i = 0; i < s.length(); i ++) {
             char c = s.charAt(i); 
             if(c == 'p') {
@@ -14,19 +16,6 @@ class Solution {
             }
         }
         
-        answer = checkCount(pCount, yCount);
-
-        return answer;
-    }
-    
-    public boolean checkCount(int pCount, int yCount) {
-        if (pCount == 0 && yCount == 0) {
-            return true;
-        }
-        if (pCount == yCount) {
-            return true;
-        }
-        
-        return false;
+        return pCount == yCount;
     }
 }
