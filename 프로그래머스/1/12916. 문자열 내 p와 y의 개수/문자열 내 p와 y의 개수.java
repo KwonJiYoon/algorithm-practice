@@ -9,8 +9,7 @@ class Solution {
             char c = s.charAt(i); 
             if(c == 'p') {
                 count ++;
-            } 
-            if(c == 'y') {
+            } else if(c == 'y') {
                 count --;
             }
         }
