@@ -1,7 +1,7 @@
 class Solution {
     public int solution(int num) {
         int answer = 0;
-        long target = Long.valueOf(num);
+        long target = (long)num;
         
         while(target != 1) {
             if(target % 2 == 0) {
