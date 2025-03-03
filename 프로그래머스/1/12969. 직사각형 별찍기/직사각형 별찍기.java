@@ -6,12 +6,16 @@ class Solution {
         int a = sc.nextInt();
         int b = sc.nextInt();
         
-        // 문자열을 미리 생성하여 성능 최적화
-        String row = "*".repeat(a);
+        StringBuilder sb = new StringBuilder();
 
-        // 반복문을 사용하여 출력
+        // 한 줄을 미리 생성
+        String row = new String(new char[a]).replace("\0", "*");
+
         for (int i = 0; i < b; i++) {
-            System.out.println(row);
+            sb.append(row).append("\n");
         }
+
+        // 마지막 개행 제거
+        System.out.print(sb.substring(0, sb.length() - 1));
     }
 }
