@@ -5,17 +5,19 @@ class Solution {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        
-        StringBuilder sb = new StringBuilder();
+        sc.close();
+
+        // 예상되는 문자열 크기 미리 지정
+        StringBuilder sb = new StringBuilder(b * (a + 1)); 
 
         // 한 줄을 미리 생성
-        String row = new String(new char[a]).replace("\0", "*");
+        String row = "*".repeat(a) + "\n"; 
 
         for (int i = 0; i < b; i++) {
-            sb.append(row).append("\n");
+            sb.append(row);
         }
 
-        // 마지막 개행 제거
-        System.out.print(sb.substring(0, sb.length() - 1));
+        // 마지막 개행 제거 없이 출력
+        System.out.print(sb);
     }
 }
