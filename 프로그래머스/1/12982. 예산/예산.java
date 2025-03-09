@@ -11,7 +11,7 @@ class Solution {
             remain -= needs;   
             
             if(remain < 0) {
-                return answer;
+               break;
             }
             
             answer++;
