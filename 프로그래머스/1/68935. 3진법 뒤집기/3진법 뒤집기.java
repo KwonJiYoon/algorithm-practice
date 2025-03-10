@@ -1,14 +1,12 @@
 class Solution {
     public int solution(int n) {
-        String str = "";
+        StringBuilder sb = new StringBuilder();
 
-        // 10진법 → 3진법 변환 (뒤집힌 순서로 저장됨)
-        while (n != 0) {
-            str += n % 3;   // 3으로 나눈 나머지를 문자열에 추가
-            n /= 3;         // n을 3으로 나눈 몫을 업데이트 (다음 자리 계산)
+        while (n > 0) {
+            sb.append(n % 3);  // 3으로 나눈 나머지를 추가
+            n /= 3;
         }
 
-        // 뒤집힌 3진법 숫자를 10진법으로 변환
-        return Integer.parseInt(str, 3);
+        return Integer.parseInt(sb.toString(), 3); // 3진법 문자열 → 10진법 변환
     }
 }
