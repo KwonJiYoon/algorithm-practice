@@ -1,7 +1,6 @@
 class Solution {
-    
     public String solution(String s) {
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         String[] stringArr = s.split("");
         int index = 0;
         
@@ -10,12 +9,10 @@ class Solution {
                 index = 1;
             } 
             
-            answer += index % 2 == 0 ? stringArr[i].toUpperCase() : stringArr[i].toLowerCase();
+            sb.append(index % 2 == 0 ? stringArr[i].toUpperCase() : stringArr[i].toLowerCase());
             index ++;
         }
         
-        
-        
-        return answer;
+        return sb.toString();
     }
 }
