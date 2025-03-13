@@ -1,34 +1,27 @@
 import java.util.Arrays;
 
 class Solution {
-    int count = 0;
-    
     public int solution(int[] number) {
-        boolean[] visit = new boolean[number.length];
-        Arrays.sort(number);
+        // 브루트 포스 
+        // 가능한 경우의 수 모두 탐색 
+        int length = number.length;
+        int sum = 0;
+        int count = 0;
         
-        backTracking(number, visit, 0, 0, 0);
-        
+        for(int i = 0; i < length; i++) {
+            sum = number[i];
+            for(int j = i + 1; j < length; j++) {
+                sum += number[j];
+                for(int n = j + 1; n < length; n++) {
+                    if(sum + number[n] == 0) {
+                        count ++;
+                    }
+                }
+                sum = number[i];
+            }
+            sum = 0;
+        }
         return count;
     }
     
-    private void backTracking(int[] number, boolean[] visit, int start, int depth, int sum) {
-        if(depth == 3) {
-            if(sum == 0) {
-                count++;
-            }
-            return;
-        }
-        
-        for(int i = start; i < number.length; i++) {
-            if(visit[i]) {
-                continue;
-            }
-            
-            visit[i] = true;
-            backTracking(number, visit, i + 1, depth + 1, sum + number[i]);
-            visit[i] = false;
-        }
-        
-    }
 }
