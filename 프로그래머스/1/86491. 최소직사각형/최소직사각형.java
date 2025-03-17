@@ -5,18 +5,15 @@ class Solution {
         int width = 0;
         int height = 0;
         
-        for(int i = 0; i < sizes.length; i++) {
+        for(int[] size : sizes) {
             
-            int max = Math.max(sizes[i][0], sizes[i][1]);
-            int min = Math.min(sizes[i][0], sizes[i][1]);
+            int max = Math.max(size[0], size[1]);
+            int min = Math.min(size[0], size[1]);
             
             width = Math.max(width, max);
             height = Math.max(height, min);
             
         }
-        
-        
-        
         
         return width * height;
     }
