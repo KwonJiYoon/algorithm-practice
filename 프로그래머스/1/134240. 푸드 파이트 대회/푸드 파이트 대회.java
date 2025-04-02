@@ -4,10 +4,9 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         int num = 1;
         
-        for(int i = 0; i < food.length; i++) {
-            if(i != 0) {
-                sb.append(Integer.toString(num).repeat((food[i] % 2 == 0 ? food[i] : food[i] - 1) / 2));
-                num++;
+        for(int i=1; i<food.length; i++){
+            for(int j=0; j<food[i]/2; j++){
+                sb.append(i);
             }
         }
 
