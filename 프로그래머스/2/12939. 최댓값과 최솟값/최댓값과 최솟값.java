@@ -2,6 +2,7 @@ import java.util.*;
 
 class Solution {
     public String solution(String s) {
+        StringBuilder st = new StringBuilder();
         String[] nums = s.split(" "); 
         int min = Integer.parseInt(nums[0]);
         int max = Integer.parseInt(nums[0]);
@@ -14,6 +15,10 @@ class Solution {
             
         }
         
-        return min + " " + max;
+        st.append(String.valueOf(min));
+        st.append(" ");
+        st.append(String.valueOf(max));
+        
+        return st.toString();
     }
 }
