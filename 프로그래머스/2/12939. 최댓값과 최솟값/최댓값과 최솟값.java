@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public String solution(String s) {
-        String answer = "";
+        StringBuilder st = new StringBuilder();
         String[] nums = s.split(" "); 
         int min = 0;
         int max = 0;
@@ -20,7 +20,10 @@ class Solution {
             
         }
         
-        answer = String.valueOf(min) + " " + String.valueOf(max);
-        return answer;
+        st.append(String.valueOf(min));
+        st.append(" ");
+        st.append(String.valueOf(max));
+        
+        return st.toString();
     }
 }
