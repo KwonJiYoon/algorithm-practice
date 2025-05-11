@@ -13,16 +13,12 @@ class Solution {
             compInfo.put(p, compInfo.get(p) - 1);
         }
         
-        Iterator<Map.Entry<String, Integer>> iter = compInfo.entrySet().iterator(); 
-        
-        while(iter.hasNext()) {
-            Map.Entry<String, Integer> entry = iter.next(); 
-            if (entry.getValue() != 0){ 
-                answer = entry.getKey();
-                break; 
-            } 
+        for (String key : compInfo.keySet()) {
+            if (compInfo.get(key) != 0){
+                answer = key;
+            }
         }
-        
         return answer;
+
     }
 }
