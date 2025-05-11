@@ -5,13 +5,13 @@ class Solution
     public int solution(int []A, int []B)
     {
         int answer = 0;
+        int length = A.length;
+        
         Arrays.sort(A);
         Arrays.sort(B);
-        int j = A.length - 1;
-            
-        for(int i = 0; i < A.length; i++) {
-            answer += A[i] * B[j];
-            j--;
+
+        for(int i = 0; i < length; i++) {
+            answer += A[i] * B[length - (i + 1)];
         }
 
         return answer;
