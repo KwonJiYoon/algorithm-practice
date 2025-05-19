@@ -12,7 +12,6 @@ class Solution {
             
             if(word.length() != 0) {
                 answer.append(word.substring(0,1).toUpperCase() + word.substring(1));
-
             } else {
                 answer.append(word);
             }
