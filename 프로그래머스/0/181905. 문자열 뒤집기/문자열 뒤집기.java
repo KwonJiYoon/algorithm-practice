@@ -1,16 +1,9 @@
 class Solution {
     public String solution(String my_string, int s, int e) {
         
-        char[] charArr = my_string.toCharArray();
+        StringBuilder target = new StringBuilder(my_string.substring(s, e + 1));
+        target.reverse();
         
-        while(s <= e) {
-            char temp = charArr[s];
-            charArr[s] = charArr[e];
-            charArr[e] = temp;
-            
-            s++;
-            e--;
-        }
-        return new String(charArr);
+        return my_string.substring(0, s) + target + my_string.substring(e + 1);
     }
 }
