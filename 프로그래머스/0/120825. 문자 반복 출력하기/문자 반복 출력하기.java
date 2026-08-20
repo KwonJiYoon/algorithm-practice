@@ -4,9 +4,10 @@ class Solution {
         char[] charArr = my_string.toCharArray();
         
         for(char c : charArr) {
-            for(int i = 0; i < n; i++){
-                answer.append(c);
-            }
+            // for(int i = 0; i < n; i++){
+            //     answer.append(c);
+            // }
+            answer.append(String.valueOf(c).repeat(n));
         }
         return answer.toString();
     }
