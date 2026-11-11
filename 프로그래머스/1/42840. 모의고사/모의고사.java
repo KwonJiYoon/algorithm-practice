@@ -19,15 +19,19 @@ class Solution {
         int maxScore = Math.max(scores[0], Math.max(scores[1], scores[2]));
 
         // 가장 높은 점수인 사람 
-        List<Integer> answer = new ArrayList<>();
+        List<Integer> temp = new ArrayList<>();
         
         for(int i = 0; i < scores.length; i++) {
             if (maxScore == scores[i]) {
-                answer.add(i + 1);
+                temp.add(i + 1);
             }
         }
         
-        // list -> Array
-        return answer.stream().mapToInt(Integer::intValue).toArray();
+        int[] answer = new int[temp.size()];
+        
+        for(int i = 0; i < temp.size(); i++) {
+            answer[i] = temp.get(i);
+        }
+        return answer;
     }
 }
